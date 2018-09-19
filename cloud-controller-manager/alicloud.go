@@ -195,7 +195,10 @@ func (c *Cloud) EnsureLoadBalancer(clusterName string, service *v1.Service, node
 		}
 	} else {
 		for _, v := range ns {
-			i, err := c.climgr.Instances().findInstanceByNode(types.NodeName(v.Name))
+			if v.Spec.ProviderID == "" {
+				return nil, fmt.Errorf("alicloud: node %s has no Provider ID, this should NOT happened", v.Spec.ProviderID)
+			}
+			i, err := c.climgr.Instances().findInstanceByNode(types.NodeName(v.Spec.ProviderID))
 			if err != nil {
 				return nil, err
 			}
