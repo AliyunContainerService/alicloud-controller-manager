@@ -1,3 +1,7 @@
+# ReadOnly Repository Notification
+Alibaba Cloud Provider project is officially moved to https://github.com/kubernetes/cloud-provider-alibaba-cloud. **Please submit any issue and pull request [there](https://github.com/kubernetes/cloud-provider-alibaba-cloud)**.
+This repository would deprecated for readonly. 
+
 # Kubernetes Cloud Controller Manager for Alibaba Cloud
 
 `cloud-controller-manager` is the external Kubernetes cloud controller manager implementation for AliCloud(Alibaba Cloud). Running `cloud-controller-manager` allows you build your kubernetes clusters leverage on many cloud services on AliCloud. You can read more about Kubernetes cloud controller manager [here](https://kubernetes.io/docs/tasks/administer-cluster/running-cloud-controller/).
